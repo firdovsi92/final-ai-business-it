@@ -1,0 +1,143 @@
+---
+const services = [
+  {
+    title: "AI İnteqrasiya və Avtomatlaşdırma",
+    description: "Şirkətlərin mövcud sistemlərinə süni intellekt həllərinin tətbiqi ilə iş proseslərini sadələşdirin.",
+    icon: "⚙️"
+  },
+  {
+    title: "Məlumat Analitikası və Proqnozlaşdırma",
+    description: "AI alqoritmləri vasitəsilə böyük həcmli məlumatların təhlili və gələcək trendlərin proqnozlaşdırılması.",
+    icon: "📊"
+  },
+  {
+    title: "Chatbot və Virtual Köməkçilər",
+    description: "Müştəri xidmətlərini avtomatlaşdırmaq və təcrübəni yaxşılaşdırmaq üçün AI əsaslı sistemlər.",
+    icon: "💬"
+  },
+  {
+    title: "Təlim və Məsləhət Xidmətləri",
+    description: "Şirkətlər üçün AI ilə bağlı təlimlər və texnoloji məsləhətlər təqdim edirik.",
+    icon: "🎓"
+  }
+];
+
+const values = [
+  {
+    title: "İnnovasiya və Texnoloji Liderlik",
+    description: "Süni intellekt sahəsində ən son texnologiyaları tətbiq edirik.",
+    icon: "🚀"
+  },
+  {
+    title: "Fərdi Yanaşma",
+    description: "Hər bir şirkətin spesifik ehtiyaclarını nəzərə alaraq uyğun AI həlləri təklif edirik.",
+    icon: "👥"
+  },
+  {
+    title: "Effektivlik və Xərclərə Qənaət",
+    description: "AI texnologiyalarının tətbiqi ilə iş proseslərini optimallaşdıraraq səmərəliliyi artırırıq.",
+    icon: "💰"
+  },
+  {
+    title: "Təhlükəsizlik və Etibarlılıq",
+    description: "Məlumatların qorunmasını təmin edən təhlükəsiz AI həlləri təqdim edirik.",
+    icon: "🔒"
+  }
+];
+---
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Xidmətlərimiz</h2>
+      <p>Kiçik və orta bizneslər üçün qabaqcıl süni intellekt həlləri təqdim edirik</p>
+    </div>
+    
+    <div class="services-grid">
+      {services.map(service => (
+        <div class="service-card">
+          <div class="service-icon">{service.icon}</div>
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="values-section">
+      <div class="section-header">
+        <h2>Dəyər və Üstünlüklər</h2>
+      </div>
+      
+      <div class="values-grid">
+        {values.map(value => (
+          <div class="value-card">
+            <div class="value-icon">{value.icon}</div>
+            <h3>{value.title}</h3>
+            <p>{value.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    padding: 6rem 0;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem; /* Reduced from 2.5rem */
+    margin-bottom: 1rem;
+  }
+  
+  .section-header p {
+    color: #aaa;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.9rem; /* Reduced text size */
+  }
+  
+  .services-grid, .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .service-card, .value-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .service-card:hover, .value-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .service-icon, .value-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .service-card h3, .value-card h3 {
+    font-size: 1.3rem; /* Reduced from 1.5rem */
+    margin-bottom: 1rem;
+  }
+  
+  .service-card p, .value-card p {
+    color: #aaa;
+    font-size: 0.9rem; /* Reduced from 1rem */
+    line-height: 1.6;
+  }
+  
+  .values-section {
+    margin-top: 6rem;
+  }
+</style>

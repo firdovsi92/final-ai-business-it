@@ -1,0 +1,159 @@
+---
+---
+
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'https://primary-n8n-yeni.up.railway.app/webhook/6f89b077-5cad-48db-b026-3edac3932103/chat',
+    target: '#n8n-chat',
+    mode: 'window',
+    chatInputKey: 'chatInput',
+    chatSessionKey: 'sessionId',
+    metadata: {},
+    showWelcomeScreen: false,
+    defaultLanguage: 'az',
+    initialMessages: [
+      'Salam! 👋',
+      'Mənim adım Nathan. Bu gün sizə necə kömək edə bilərəm?'
+    ],
+    i18n: {
+      az: {
+        title: 'AI Biznes IT',
+        subtitle: "Söhbətə başlayın. Biz 7/24 sizə kömək etməyə hazırıq.",
+        footer: '',
+        getStarted: 'Yeni Söhbət',
+        inputPlaceholder: 'Sualınızı yazın...',
+      },
+      en: {
+        title: 'AI Business IT',
+        subtitle: "Start a chat. We're here to help you 24/7.",
+        footer: '',
+        getStarted: 'New Conversation',
+        inputPlaceholder: 'Type your question...',
+      }
+    },
+    primaryColor: '#6366f1'
+	});
+</script>
+
+<style is:global>
+  /* Modern chat styling */
+  :root {
+    --chat--color-primary: #6366f1;
+    --chat--color-primary-shade-50: #4f46e5;
+    --chat--color-primary-shade-100: #4338ca;
+  }
+  
+  /* Chat window styling */
+  .n8n-chat__window {
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  /* Header styling */
+  .n8n-chat__header {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+    padding: 16px !important;
+  }
+  
+  /* Message styling */
+  .n8n-chat__message--bot {
+    background-color: #1e1e1e !important;
+    border-radius: 18px 18px 18px 4px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .n8n-chat__message--user {
+    background-color: #6366f1 !important;
+    color: white !important;
+    border-radius: 18px 18px 4px 18px !important;
+    box-shadow: 0 2px 10px rgba(99, 102, 241, 0.2) !important;
+  }
+  
+  /* Input area styling */
+  .n8n-chat__input-container {
+    background-color: #0f0f0f !important;
+    border-top: 1px solid #222 !important;
+    padding: 12px !important;
+  }
+  
+  /* Input field styling */
+  .n8n-chat__input {
+    border-radius: 24px !important;
+    background-color: #1a1a1a !important;
+    border: 1px solid #333 !important;
+    padding: 12px 18px !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .n8n-chat__input:focus {
+    border-color: #6366f1 !important;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2) !important;
+  }
+  
+  /* Send button styling */
+  .n8n-chat__send-button {
+    background-color: #6366f1 !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3) !important;
+    transition: transform 0.2s ease !important;
+  }
+  
+  .n8n-chat__send-button:hover {
+    transform: scale(1.05) !important;
+  }
+  
+  /* Toggle button styling */
+  .n8n-chat__toggle {
+    border-radius: 50% !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+    transition: transform 0.3s ease !important;
+  }
+  
+  .n8n-chat__toggle:hover {
+    transform: scale(1.1) !important;
+  }
+  
+  .n8n-chat__toggle svg path {
+    fill: #ffffff !important;
+  }
+  
+  /* Animation for messages */
+  .n8n-chat__message {
+    animation: fadeIn 0.3s ease-out !important;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Scrollbar styling */
+  .n8n-chat__messages::-webkit-scrollbar {
+    width: 6px !important;
+  }
+  
+  .n8n-chat__messages::-webkit-scrollbar-track {
+    background: #0a0a0a !important;
+  }
+  
+  .n8n-chat__messages::-webkit-scrollbar-thumb {
+    background: #333 !important;
+    border-radius: 3px !important;
+  }
+  
+  .n8n-chat__messages::-webkit-scrollbar-thumb:hover {
+    background: #6366f1 !important;
+  }
+</style>
+
+<div id="n8n-chat"></div>

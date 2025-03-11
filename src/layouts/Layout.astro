@@ -1,0 +1,75 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="AI Business IT - AI solutions for small and medium businesses" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.69/build/spline-viewer.js"></script>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--text-color: #ffffff;
+		--bg-color: #000000;
+		--accent-color: #3d5afe;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	html {
+		font-family: 'Inter', system-ui, sans-serif;
+		background: var(--bg-color);
+		color: var(--text-color);
+		scroll-behavior: smooth;
+	}
+	body {
+		min-height: 100vh;
+	}
+	a {
+		color: var(--text-color);
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+	a:hover {
+		color: var(--accent-color);
+	}
+	.container {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+	}
+	.btn {
+		display: inline-block;
+		padding: 0.8rem 1.5rem;
+		background-color: var(--accent-color);
+		color: white;
+		border-radius: 4px;
+		font-weight: 500;
+		transition: all 0.3s ease;
+	}
+	.btn:hover {
+		background-color: #304ffe;
+		transform: translateY(-2px);
+		color: white;
+	}
+</style>

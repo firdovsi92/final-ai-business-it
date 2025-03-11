@@ -1,0 +1,162 @@
+---
+const faqItems = [
+  {
+    question: "Süni intellekti nə üçün biznesimə inteqrasiya etməliyəm?",
+    answer: "Süni intellekt texnologiyaları biznesinizin effektivliyini artırmaq, xərcləri azaltmaq və rəqabət üstünlüyü əldə etmək üçün güclü vasitədir. Süni intellekt rutin tapşırıqları avtomatlaşdıraraq işçilərinizin daha dəyərli işlərə fokuslanmasına imkan verir, müştəri təcrübəsini fərdiləşdirir və məlumatlardan dəyərli anlayışlar çıxararaq daha yaxşı biznes qərarları verməyə kömək edir."
+  },
+  {
+    question: "Kiçik və orta biznes olaraq süni intellekt həllərini necə tətbiq edə bilərəm?",
+    answer: "Kiçik və orta bizneslər üçün süni intellekti tətbiq etməyin bir neçə praktik yolu var. Hazır süni intellekt xidmətlərindən istifadə edərək başlaya bilərsiniz - müştəri xidməti üçün chatbotlar, marketinq üçün məzmun yaratma alətləri, satış proqnozları üçün analitik həllər. AI Business IT kimi şirkətlər sizə biznesinizin ehtiyaclarına uyğun həllər təklif edə bilər, böyük investisiya tələb etmədən süni intellektin üstünlüklərindən yararlanmağa kömək edər."
+  },
+  {
+    question: "Süni intellekt həllərinin tətbiqi nə qədər xərc tələb edir?",
+    answer: "Süni intellekt həllərinin xərci layihənin miqyasından və mürəkkəbliyindən asılı olaraq dəyişir. Xoş xəbər odur ki, bulud əsaslı süni intellekt xidmətləri və hazır həllər sayəsində, kiçik və orta bizneslər üçün süni intellekt daha əlçatan olub. Biz müştərilərimizə büdcələrinə uyğun həllər təklif edirik - aylıq abunə modelindən tutmuş xüsusi layihələrə qədər. Əsas məqsədimiz süni intellekt investisiyanızın biznesinizə real dəyər qatmasını və qısa müddətdə özünü doğrultmasını təmin etməkdir."
+  },
+  {
+    question: "Süni intellekt həlləri hansı biznes proseslərinə tətbiq edilə bilər?",
+    answer: "Süni intellekt demək olar ki, bütün biznes sahələrində tətbiq edilə bilər: Müştəri xidməti (24/7 chatbotlar, sorğuların avtomatik təsnifatı), Marketinq (hədəflənmiş kampaniyalar, kontentin optimallaşdırılması), Satış (müştəri davranışının təhlili, satış proqnozları), Əməliyyatlar (təchizat zəncirinin optimallaşdırılması, keyfiyyətə nəzarət), Maliyyə (fırıldaqçılığın aşkarlanması, xərclərin təhlili), İnsan resursları (namizədlərin seçilməsi, işçi performansının təhlili). Biznesinizin ehtiyaclarına uyğun olaraq, ən çox dəyər qatacaq sahələrdən başlayaraq süni intellekti mərhələli şəkildə tətbiq etməyi tövsiyə edirik."
+  },
+  {
+    question: "Süni intellekt həllərinin tətbiqi nə qədər vaxt aparır və necə başlamalıyam?",
+    answer: "Tətbiq müddəti layihənin miqyasından asılı olaraq bir neçə həftədən bir neçə aya qədər dəyişə bilər. Başlamaq üçün ən yaxşı yol bizimlə pulsuz məsləhətləşmə seansı təşkil etməkdir. Bu görüşdə biznesinizin ehtiyaclarını müəyyənləşdirəcək, süni intellektin ən çox fayda verə biləcəyi sahələri təhlil edəcək və sizə uyğun yol xəritəsi təklif edəcəyik. Biz həmçinin kiçik pilot layihələrlə başlamağı tövsiyə edirik - bu, riskinizi minimuma endirməklə süni intellektin biznesinizə gətirəcəyi faydaları qiymətləndirməyə imkan verir."
+  }
+];
+---
+
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="section-header">
+      <h2>Tez-tez Verilən Suallar</h2>
+      <p>Süni intellektin biznesinizə inteqrasiyası haqqında ən çox soruşulan suallar</p>
+    </div>
+    
+    <div class="faq-container">
+      {faqItems.map((item, index) => (
+        <div class="faq-item">
+          <button class="faq-question">
+            {item.question}
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>{item.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    padding: 6rem 0;
+    background-color: #050505;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .section-header p {
+    color: #aaa;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+  }
+  
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .faq-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .faq-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-question.active .faq-icon {
+    transform: rotate(45deg);
+  }
+  
+  .faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .faq-answer p {
+    color: #aaa;
+    line-height: 1.6;
+    padding-bottom: 1.5rem;
+  }
+  
+  .faq-question.active + .faq-answer {
+    max-height: 500px;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        // Close all other questions
+        faqQuestions.forEach(q => {
+          if (q !== question && q.classList.contains('active')) {
+            q.classList.remove('active');
+            q.nextElementSibling.style.maxHeight = '0';
+          }
+        });
+        
+        // Toggle current question
+        question.classList.toggle('active');
+        const answer = question.nextElementSibling;
+        
+        if (question.classList.contains('active')) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+          answer.style.maxHeight = '0';
+        }
+      });
+    });
+    
+    // Open the first FAQ item by default
+    if (faqQuestions.length > 0) {
+      faqQuestions[0].click();
+    }
+  });
+</script>
